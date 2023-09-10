@@ -1,6 +1,6 @@
-@use "/styles/variables" as *;
-@use "/styles/mixins" as *;
-@use "/styles/functions" as *;
+@use "/base-styles/variables" as *;
+@use "/base-styles/mixins" as *;
+@use "/base-styles/functions" as *;
 
 .navigation {
   padding: 1rem;

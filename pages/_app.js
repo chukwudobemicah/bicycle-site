@@ -1,4 +1,4 @@
-import "../styles/_base.scss";
+import "../base-styles/_base.scss";
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
