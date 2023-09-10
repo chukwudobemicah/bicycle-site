@@ -4,12 +4,8 @@
 
 .navigation {
   padding: 1rem;
-  max-height: 3rem;
+  max-height: 6rem;
   background-color: var(--black);
-
-  @include responsive-tablet {
-    max-height: 6rem;
-  }
 
   p {
     @include responsive-tablet {
@@ -46,7 +42,7 @@
 
 .section {
   position: relative;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 6rem);
   overflow-x: hidden;
   @include flex-column;
   justify-content: center;
