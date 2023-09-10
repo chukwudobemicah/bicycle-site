@@ -43,7 +43,6 @@
 
 .section {
   position: relative;
-  overflow: hidden;
   height: calc(100vh - 10vh);
   @include flex-column;
   justify-content: center;
