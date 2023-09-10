@@ -45,6 +45,9 @@
   position: relative;
   overflow: hidden;
   height: calc(100vh - 10vh);
+  @include flex-column;
+  justify-content: center;
+
   .section--background {
     position: absolute;
     top: 0;
@@ -108,13 +111,15 @@
     z-index: 2;
     justify-content: center;
     align-items: center;
-    bottom: 1rem;
+    bottom: 0;
+    margin-bottom: 1rem;
     max-width: toRem(235.3px);
-    border: 1px solid var(--dim-yellow);
+    border: 2px solid var(--dim-yellow);
     padding: 2rem;
     left: 50%;
     transform: translate(-50%, 0);
     min-width: 80%;
+    max-height: 40%;
     background-color: var(--black);
     border-radius: 1.875rem 1.875rem 0rem 0rem;
     background: rgba(0, 0, 0, 0.2);
