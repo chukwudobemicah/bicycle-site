@@ -4,10 +4,7 @@
 
 .navigation {
   padding: 1rem;
-  // height: calc(100vh - 90vh);
-  @include responsive-tablet {
-    // padding: 1.5rem;
-  }
+  max-height: 6rem;
 
   p {
     @include responsive-tablet {
@@ -183,7 +180,7 @@
 
     .section__container-4--mobile-hero {
       width: 110vw;
-      // max-width: 65vh;
+      max-width: 65vh;
       transform: scale(2);
       @include responsive-tablet {
         display: none;
