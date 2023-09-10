@@ -160,7 +160,7 @@ export default function Home() {
               ref={mobileHeroRef}
               src="/bicycle.svg"
               width={750}
-              height={687.9412841796875}
+              height={343.6}
               priority
             />
             <Image

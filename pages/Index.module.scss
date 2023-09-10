@@ -43,8 +43,7 @@
 
 .section {
   position: relative;
-  // height: calc(100vh - 10vh);
-  // max-height: 200vh;
+  height: calc(100vh - 10vh);
   overflow-x: hidden;
   @include flex-column;
   justify-content: center;
@@ -58,13 +57,14 @@
     top: 0;
     left: 0;
     z-index: -2;
-    min-width: 80vh;
+    min-width: 90vh;
     filter: brightness(350%);
     transform: rotate(-90deg) translateY(-20%);
 
     @include responsive-tablet {
       top: 0;
       left: 50%;
+      min-width: 80vh;
       transform: rotate(0) translate(-50%);
     }
   }
@@ -182,7 +182,7 @@
 
     .section__container-4--mobile-hero {
       width: 110vw;
-      max-width: 65vh;
+      // max-width: 65vh;
       transform: scale(2);
       @include responsive-tablet {
         display: none;
