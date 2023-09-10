@@ -6,19 +6,31 @@ import styles from "./Index.module.scss";
 import { gsap } from "gsap";
 
 export default function Home() {
-  const imageRef = useRef(null);
+  const mobileHeroRef = useRef(null);
+  const desktopHeroRef = useRef(null);
   const infoRef = useRef(null);
 
   useEffect(() => {
-    const image = imageRef.current;
+    const mobileHero = mobileHeroRef.current;
+    const desktopHero = desktopHeroRef.current;
     const info = infoRef.current;
 
     let ctx = gsap.context(() => {
-      let tl = gsap.timeline();
-      tl.from(image, { xPercent: -200, duration: 2, ease: "ease" }).from(info, {
+      gsap.from(mobileHero, {
+        xPercent: -200,
+        duration: 2,
+        ease: "ease",
+      });
+      gsap.from(desktopHero, {
+        xPercent: -200,
+        duration: 2,
+        ease: "ease",
+      });
+      gsap.from(info, {
         opacity: 0,
         yPercent: 100,
         duration: 1.5,
+        delay: 2,
       });
     });
 
@@ -145,7 +157,7 @@ export default function Home() {
           <div className={styles["section__container-4"]}>
             <Image
               className={styles["section__container-4--mobile-hero"]}
-              ref={imageRef}
+              ref={mobileHeroRef}
               src="/bicycle.svg"
               width={750}
               height={687.9412841796875}
@@ -153,7 +165,7 @@ export default function Home() {
             />
             <Image
               className={styles["section__container-4--desktop-hero"]}
-              ref={imageRef}
+              ref={desktopHeroRef}
               src="/bicycle.svg"
               width={1184.3214111328125}
               height={687.9412841796875}
