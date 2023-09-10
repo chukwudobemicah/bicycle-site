@@ -43,7 +43,9 @@
 
 .section {
   position: relative;
-  height: calc(100vh - 10vh);
+  // height: calc(100vh - 10vh);
+  // max-height: 200vh;
+  overflow-x: hidden;
   @include flex-column;
   justify-content: center;
 
