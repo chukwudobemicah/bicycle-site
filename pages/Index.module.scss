@@ -49,6 +49,10 @@
   @include flex-column;
   justify-content: center;
 
+  @include responsive-tablet {
+    height: calc(100vh - 10vh);
+  }
+
   .section--background {
     position: absolute;
     top: 0;
