@@ -1,0 +1,35 @@
+@use "./variables" as vars;
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin grid($rows: 0fr, $cols: 0fr) {
+  display: grid;
+  grid-template-rows: $rows;
+  grid-template-columns: $cols;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin responsive($sz) {
+  @media screen and (min-width: $sz) {
+    @content;
+  }
+}
+
+@mixin responsive-tablet {
+  @media screen and (min-width: vars.$tablet-sz) {
+    @content;
+  }
+}
+
+@mixin responsive-tablet {
+  @media screen and (min-width: vars.$desktop-sz) {
+    @content;
+  }
+}

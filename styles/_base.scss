@@ -1,0 +1,80 @@
+@use "./variables" as vars;
+@use "./functions" as *;
+@use "./mixins" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=block");
+
+:root {
+  --green: #00ff8f;
+  --purple: #7a7779;
+  --blue: #319eee;
+  --dark-blue: #319eee;
+  --dim-yellow: #ffffff33;
+  --black: #000;
+  --white: #fff;
+}
+
+/* RESETS*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+button {
+  padding: 0px;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-size: toRem(12px);
+  background-color: var(--black);
+  color: var(--dim-yellow);
+  @include responsive-tablet {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}

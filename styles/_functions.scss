@@ -1,0 +1,9 @@
+@function toRem($num) {
+  $rem: calc($num / 16px);
+  @return $rem * 1rem;
+}
+
+@function toEm($num) {
+  $rem: calc($num / 16px);
+  @return $rem * 1em;
+}
