@@ -27,6 +27,10 @@
     height: 0.5px;
     background-color: var(--dim-yellow);
     margin-top: 1.5rem;
+
+    @include responsive-tablet {
+      margin-top: 1rem;
+    }
   }
 
   ul {
@@ -43,13 +47,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 90vh;
+    z-index: -3;
+    min-width: 80vh;
     transform: rotate(-90deg) translateY(-20%);
 
     @include responsive-tablet {
-      top: 50%;
+      top: -10%;
       left: 50%;
-      transform: rotate(0) translate(-50%, -50%);
+      // transform: rotate(0) translate(-50%, -50%);
+      transform: rotate(0) translate(-50%);
     }
   }
 
@@ -77,11 +83,11 @@
 
   .section__container-2 {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 1rem;
     max-width: toRem(235.3px);
-    border: 0.5px dotted var(--dim-yellow);
-    padding: 0.8rem;
+    // border: 0.5px dotted var(--dim-yellow);
+    // padding: 0.8rem;
     left: 20%;
     clip-path: polygon(
       0% 0%,
@@ -92,6 +98,15 @@
       0 85%,
       1% 86%
     );
+    // svg {
+    //   transform: rotateY(180deg);
+    // }
+    // p {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    // }
   }
 
   .section__container-3 {
@@ -102,9 +117,11 @@
     justify-content: center;
     align-items: center;
     top: 45%;
+
     @include responsive-tablet {
-      top: 59%;
+      top: 55%;
     }
+
     max-width: toRem(235.3px);
     border: 1px solid var(--dim-yellow);
     padding: 0.8rem;
@@ -112,8 +129,36 @@
     transform: translate(-50%, 0);
     min-width: 80%;
     background-color: var(--black);
-    background-color: #000000cc;
+    // background-color: #000000cc;
+    // background-color: #00000033;
+    border-radius: 1.875rem 1.875rem 0rem 0rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(25px);
     justify-content: space-between;
+    // backdrop-filter: blur;
+    // filter: blur(10%);
+    // position: relative;
+    // background-image: url("https://s3.ap-south-1.amazonaws.com/s3.studytonight.com/tutorials/uploads/pictures/1627476216-101156.png");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // height: 100%;
+    // filter: blur(8px); /* Adding blur background image */
+
+    // .section__container-3__blur-background {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    // }
+    // ul {
+    //   filter: blur(0);
+    //   li {
+    //     filter: blur(0);
+    //   }
+    // }
+
     clip-path: polygon(
       0 0,
       33% 0,
@@ -151,9 +196,10 @@
   .section__container-4 {
     @include responsive-tablet {
       position: absolute;
-      top: 50%;
+      top: -10%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      // transform: translate(-50%, -50%);
+      transform: translateX(-50%);
     }
 
     img {

@@ -73,8 +73,6 @@ body {
   font-size: toRem(12px);
   background-color: var(--black);
   color: var(--dim-yellow);
-  @include responsive-tablet {
-    max-height: 100vh;
-    overflow: hidden;
-  }
+  max-height: 100vh;
+  overflow: hidden;
 }
