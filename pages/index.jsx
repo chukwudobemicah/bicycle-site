@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-// import { Inter } from "next/font/google";
-// import styles from "@/styles/Home.module.css";
 import { Fragment, useEffect, useRef } from "react";
 import { Sling } from "hamburger-react";
 import styles from "./Index.module.scss";
@@ -34,6 +32,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/cirleplus.svg" />
       </Head>
+      {/* BEM naming convention */}
       <main>
         <nav className={styles.navigation}>
           <div className={styles["navigation__container"]}>
@@ -59,21 +58,6 @@ export default function Home() {
           </div>
 
           <div ref={infoRef} className={styles["section__container-2"]}>
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="364"
-              height="130"
-              viewBox="0 0 364 130"
-              fill="none"
-            >
-              <path
-                d="M348.812 0.642227V24.3779V69.3209V91.7924M363.557 129.009L321.646 114.43C321.329 114.32 320.996 114.264 320.661 114.264H293.523H238.233H127.654H0.342773"
-                stroke="#D9D9D9"
-                stroke-opacity="0.3"
-                stroke-width="0.5"
-                stroke-dasharray="3 6"
-              />
-            </svg> */}
             <p>
               Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
@@ -81,7 +65,6 @@ export default function Home() {
           </div>
 
           <div className={styles["section__container-3"]}>
-            {/* <div className={styles["section__container-3__blur-background"]}> */}
             <ul>
               <li>
                 <div>
@@ -107,9 +90,7 @@ export default function Home() {
                   <p>5Amp Des</p>
                 </div>
               </li>
-              {/* </ul> */}
               {/*  */}
-              {/* <ul> */}
               <li>
                 <div>
                   <p className={styles["section__container-3--heading"]}>
@@ -134,9 +115,7 @@ export default function Home() {
                   <p>Fulcrum Racing th</p>
                 </div>
               </li>
-              {/* </ul> */}
               {/*  */}
-              {/* <ul> */}
               <li>
                 <div>
                   <p className={styles["section__container-3--heading"]}>
@@ -162,10 +141,18 @@ export default function Home() {
                 </div>
               </li>
             </ul>
-            {/* </div> */}
           </div>
           <div className={styles["section__container-4"]}>
             <Image
+              className={styles["section__container-4--mobile-hero"]}
+              ref={imageRef}
+              src="/bicycle.svg"
+              width={750}
+              height={687.9412841796875}
+              priority
+            />
+            <Image
+              className={styles["section__container-4--desktop-hero"]}
               ref={imageRef}
               src="/bicycle.svg"
               width={1184.3214111328125}

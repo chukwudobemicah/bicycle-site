@@ -4,6 +4,7 @@
 
 .navigation {
   padding: 1rem;
+  height: calc(100vh - 90vh);
   @include responsive-tablet {
     padding: 1.5rem;
   }
@@ -42,31 +43,27 @@
 
 .section {
   position: relative;
-
+  overflow: hidden;
+  height: calc(100vh - 10vh);
   .section--background {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -3;
+    z-index: -1;
     min-width: 80vh;
+    filter: brightness(350%);
     transform: rotate(-90deg) translateY(-20%);
 
     @include responsive-tablet {
-      top: -10%;
+      top: 0;
       left: 50%;
-      // transform: rotate(0) translate(-50%, -50%);
       transform: rotate(0) translate(-50%);
     }
   }
 
-  @include responsive-tablet {
-    height: 100vh;
-  }
-  overflow: hidden;
-
   .section__container-1 {
     position: absolute;
-    top: 2%;
+    top: 8%;
     left: 1rem;
     @include responsive-tablet {
       display: none;
@@ -85,28 +82,23 @@
     position: absolute;
     top: 20%;
     left: 1rem;
+    padding: 2rem;
     max-width: toRem(235.3px);
-    // border: 0.5px dotted var(--dim-yellow);
-    // padding: 0.8rem;
+    background: url(../public/chatblob.svg) 100% 100% no-repeat;
     left: 20%;
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 91%,
-      20% 92%,
-      0 100%,
-      0 85%,
-      1% 86%
-    );
-    // svg {
-    //   transform: rotateY(180deg);
-    // }
-    // p {
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    // }
+    z-index: 4;
+    @include responsive-tablet {
+      top: 10%;
+    }
+    // clip-path: polygon(
+    //   0% 0%,
+    //   100% 0%,
+    //   100% 91%,
+    //   20% 92%,
+    //   0 100%,
+    //   0 85%,
+    //   1% 86%
+    // );
   }
 
   .section__container-3 {
@@ -116,48 +108,19 @@
     z-index: 2;
     justify-content: center;
     align-items: center;
-    top: 45%;
-
-    @include responsive-tablet {
-      top: 55%;
-    }
-
+    bottom: 1rem;
     max-width: toRem(235.3px);
     border: 1px solid var(--dim-yellow);
-    padding: 0.8rem;
+    padding: 2rem;
     left: 50%;
     transform: translate(-50%, 0);
     min-width: 80%;
     background-color: var(--black);
-    // background-color: #000000cc;
-    // background-color: #00000033;
     border-radius: 1.875rem 1.875rem 0rem 0rem;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(25px);
+    --webkit-backdrop-filter: blur(25px);
     justify-content: space-between;
-    // backdrop-filter: blur;
-    // filter: blur(10%);
-    // position: relative;
-    // background-image: url("https://s3.ap-south-1.amazonaws.com/s3.studytonight.com/tutorials/uploads/pictures/1627476216-101156.png");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // height: 100%;
-    // filter: blur(8px); /* Adding blur background image */
-
-    // .section__container-3__blur-background {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   height: 100%;
-    //   width: 100%;
-    // }
-    // ul {
-    //   filter: blur(0);
-    //   li {
-    //     filter: blur(0);
-    //   }
-    // }
 
     clip-path: polygon(
       0 0,
@@ -176,7 +139,7 @@
 
     ul {
       @include grid(1fr, 1fr 1fr 1fr);
-      gap: 2rem;
+      gap: 1rem;
       width: 100%;
 
       @include responsive-tablet {
@@ -198,18 +161,28 @@
       position: absolute;
       top: -10%;
       left: 50%;
-      // transform: translate(-50%, -50%);
       transform: translateX(-50%);
     }
 
     img {
       position: relative;
-      transform: scale(2);
       z-index: -1;
+      margin: 0 auto;
+    }
 
+    .section__container-4--mobile-hero {
+      width: 110vw;
+      max-width: 65vh;
+      transform: scale(2);
       @include responsive-tablet {
-        transform: scale(1.2);
-        width: 700px;
+        display: none;
+      }
+    }
+
+    .section__container-4--desktop-hero {
+      display: none;
+      @include responsive-tablet {
+        display: block;
       }
     }
   }
